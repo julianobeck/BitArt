@@ -1,0 +1,155 @@
+.iconobitart {
+    background: #000000;
+    padding-top: 15px;
+}
+
+.img_logo {
+    width: 150px;
+    height: 210px;
+    margin: 0 auto;
+    /* Es reemplazado por algun 
+    valor apropiado */
+    display: block;
+}
+
+.main_header {
+    text-align: center;
+    width: 100%;
+    background: #000000;
+    font-size: 26px;
+    font-family: 'Lobster', cursive;
+    margin-top: -8px;
+}
+
+#boton_menu {
+    display: none;
+    /*para que no se vea el checkbox, opasity: none o visivility: none también se puede usar*/
+}
+
+.icono_menu {
+    padding-top: 30px;
+}
+
+header label {
+    display: none;
+    width: 100px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+header label:hover {
+    cursor: pointer;
+    /* Cursor pasa a ser manita  */
+    background-color: salmon;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /*Eliminar la viñeta de las listas*/
+    display: inline-flex;
+}
+
+.menu li {
+    padding: 20px 25px 0px 25px;
+}
+
+.menu li a {
+    text-decoration: none;
+    /*así es para quirtar el underlan con (a)*/
+    color: white;
+    /*se quita la line y cambia a mostrarse de color blanco*/
+}
+
+.menu li a:hover {
+    text-decoration: overline;
+    /*la lines arriba para los hipervinculos*/
+    color: salmon;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-flex;
+}
+
+.dropbtn {
+    background-color: #000000;
+    font-size: 26px;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    z-index: 1;
+    /* superponer */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: salmon;
+}
+
+.dropdown:hover .dropbtn {
+    color: salmon;
+    text-decoration: overline;
+}
+
+@media (max-width: 920px) {
+    header label {
+        display: block;
+        height: 70px;
+    }
+    .menu {
+        position: absolute;
+        background-color: salmon;
+        width: 100%;
+        margin-left: -100%;
+        /*para que se esconda el menu*/
+        transition: all 0.5s;
+        z-index: 100;
+    }
+    #boton_menu:checked~.menu {
+        /*checked es cuando el link ya ha sido clicado*/
+        margin: 0;
+        /*como se escondio arriba acá lo volvemos a sacar*/
+    }
+    .menu ul {
+        display: block;
+    }
+    .menu li:hover {
+        background-color: black;
+    }
+    .dropbtn {
+        background-color: salmon;
+        color: white;
+    }
+    .dropdown-content a {
+        color: rgb(255, 255, 255);
+    }
+    .dropdown-content a:hover {
+        color: salmon;
+        background-color: black;
+    }
+    .dropdown:hover .dropbtn {
+        color: salmon;
+        background-color: black;
+    }
+}
